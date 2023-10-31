@@ -15,8 +15,9 @@ public class PaymentFormDAO {
     public void create(PaymentForm paymentForm){
         String query = "INSERT INTO payment_forms(type) VALUES(?)";
         try {
-            try(PreparedStatement stme = connection.prepareStatement(query) ){
-                stme.setString(1, paymentForm.getMethod());
+            try(PreparedStatement stmt = connection.prepareStatement(query) ){
+                stmt.setString(1, paymentForm.getMethod());
+                stmt.execute();
             }
         } catch (SQLException u) {
             throw new RuntimeException(u);

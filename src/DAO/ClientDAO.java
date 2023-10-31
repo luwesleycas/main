@@ -29,6 +29,7 @@ public class ClientDAO {
                 stmt.setString(5, client.getAddress());
                 stmt.setString(6, client.getZipcode());
                 stmt.setString(7, client.getNumber());
+                stmt.execute();
             }
         } catch (SQLException u) {
             throw new RuntimeException();

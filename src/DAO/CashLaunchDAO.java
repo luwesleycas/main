@@ -27,6 +27,7 @@ public class CashLaunchDAO {
                 stmt.setLong(2, cashLaunch.getId_payment_form());
                 stmt.setLong(3, cashLaunch.getId_order());
                 stmt.setDouble(4, cashLaunch.getValue());
+                stmt.execute();
             }
         } catch (SQLException u) {
             throw new RuntimeException(u);

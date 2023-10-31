@@ -3,7 +3,6 @@ package DAO;
 import Factory.ConnectionFactory;
 import Model.Supply;
 import java.sql.*;
-import java.sql.PreparedStatement;
 
 public class SupplyDAO {
     private final Connection connection;
@@ -22,6 +21,7 @@ public class SupplyDAO {
             try (PreparedStatement stmt = connection.prepareStatement(query)) {
                 stmt.setString(1, supply.getName());
                 stmt.setLong(2, supply.getDescript());
+                stmt.execute();
             }
         } catch (SQLException u) {
             throw new RuntimeException(u);

@@ -14,8 +14,9 @@ public class ProductTypeDAO {
     public void create(ProductType productType){
         String query = "INSERT INTO product_types(type) VALUES(?)";
         try {
-            try(PreparedStatement stme = connection.prepareStatement(query) ){
-                stme.setString(1, productType.getType());
+            try(PreparedStatement stmt = connection.prepareStatement(query) ){
+                stmt.setString(1, productType.getType());
+                stmt.execute();
             }
         } catch (SQLException u) {
             throw new RuntimeException(u);

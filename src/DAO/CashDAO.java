@@ -24,6 +24,7 @@ public class CashDAO {
                 stmt.setLong(2, cash.getType());
                 stmt.setString(3, cash.getDate());
                 stmt.setDouble(3, cash.getValue());
+                stmt.execute();
             }
         } catch (SQLException u) {
             throw new RuntimeException(u);

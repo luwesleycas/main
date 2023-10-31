@@ -29,6 +29,7 @@ public class UserDAO {
                 stmt.setString(3, User.getEmail());
                 stmt.setString(4, User.getCpf());
                 stmt.setString(5, User.getBirth());
+                stmt.execute();
             }
         }
         catch (SQLException u){

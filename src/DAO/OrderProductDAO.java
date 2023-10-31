@@ -23,6 +23,7 @@ public class OrderProductDAO {
                 stmt.setLong(1, orderProduct.getId_order());
                 stmt.setLong(2, orderProduct.getId_product());
                 stmt.setDouble(3, orderProduct.getPrice());
+                stmt.execute();
             }
         } catch (SQLException u ) {
             throw new RuntimeException(u);

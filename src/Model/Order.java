@@ -16,7 +16,7 @@ public class Order {
     long id_status;
     static String datetime_open;
     static String datetime_close;
-    double valor;
+    double value;
 
     
     public long getId() {
@@ -55,11 +55,11 @@ public class Order {
     public void setDatetime_close(String datetime_close) {
         this.datetime_close = datetime_close;
     }
-    public double getValor() {
-        return valor;
+    public double getvalue() {
+        return value;
     }
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setvalue(double value) {
+        this.value = value;
     }
 
     

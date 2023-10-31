@@ -21,6 +21,7 @@ public class DeliveryDAO {
                 stmt.setLong(1, delivery.getId_order());
                 stmt.setLong(1, delivery.getId_client());
                 stmt.setLong(1, delivery.getAdress());
+                stmt.execute();
             }
         } catch (SQLException u) {
             throw new RuntimeException(u);

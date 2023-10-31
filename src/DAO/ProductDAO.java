@@ -22,6 +22,7 @@ public class ProductDAO {
                 stmt.setLong(1, product.getDescript());
                 stmt.setLong(1, product.getId_type());
                 stmt.setDouble(1, product.getPrice());
+                stmt.execute();
             }
         } catch (SQLException u) {
             throw new RuntimeException(u);
