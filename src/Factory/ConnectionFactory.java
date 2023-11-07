@@ -14,9 +14,9 @@ import java.sql.ResultSet;
 
 public class ConnectionFactory {
     /* configura par�metros de conex?o */
-    private static final String URL = "jdbc:mysql://185.213.81.205/u182528050_2pg4";
-    private static final String USER = "u182528050_2pg4";
-    private static final String PASS = "uTkh$gthq4&";
+    private static final String URL = "jdbc:mysql://localhost:8889/pointERP";
+    private static final String USER = "root";
+    private static final String PASS = "root";
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
 
     public static Connection getConnection() {

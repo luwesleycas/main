@@ -11,17 +11,18 @@ package Model;
  * @author user
  */
 public class User {
-    long id;
+    static int id;
     static String name;
     static String pass;
     static String email;
     static String cpf;
     static String birth;
     boolean admin;
-    public long getId() {
+
+    public static int getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
     public static String getName() {
